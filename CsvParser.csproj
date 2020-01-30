@@ -9,6 +9,9 @@
 It operates like an array and exposes operations for manipulating that array. -->
 
 <ItemGroup>
+  <None Include="Marvel.csv">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None> 
 </ItemGroup>
 
 </Project>

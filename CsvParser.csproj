@@ -5,11 +5,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-<!-- ItemGroup construct is a useful tool for holding a set of filenames. 
-It operates like an array and exposes operations for manipulating that array. -->
+  <PropertyGroup Condition="'$(IsFx)' == 'true'">
+   <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
 
-<ItemGroup>
-  <EmbeddedResource Include="Marvel.csv" />
-</ItemGroup>
+  <!-- ItemGroup construct is a useful tool for holding a set of filenames. 
+  It operates like an array and exposes operations for manipulating that array. -->
+
+  <ItemGroup>
+    <EmbeddedResource Include="Marvel.csv" />
+  </ItemGroup>
 
 </Project>
